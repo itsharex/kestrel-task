@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { nextTick, onMounted, reactive, ref ,onBeforeUnmount} from 'vue'
+import { nextTick, onMounted, reactive, ref, onBeforeUnmount } from 'vue'
 import { getLast3MonthFinishedTasks } from '@/api/index.js'
 import * as echarts from 'echarts'
 import dayjs from 'dayjs'
@@ -19,7 +19,7 @@ const props = defineProps({
     },
     height: {
         type: String,
-        default: '220px'
+        default: '240px'
     }
 })
 
@@ -34,7 +34,7 @@ const initChart = () => {
         title: {
             text: '每日完成任务',
             textStyle: {
-                color: '#999',
+                color: '#f0782399',
                 fontSize: '14px'
             }
         },
@@ -71,7 +71,7 @@ const initChart = () => {
             right: 10,
             top: 12,
             textStyle: {
-                color: '#ccc'
+                color: '#f07823',
             },
             itemWidth: 12,
             itemHeight: 10
@@ -82,7 +82,7 @@ const initChart = () => {
             data: xData.value,
             axisLine: {
                 lineStyle: {
-                    color: '#ccc'
+                    color: '#f0782399'
                 }
             },
             axisLabel: {
@@ -96,17 +96,16 @@ const initChart = () => {
 
         yAxis: {
             type: 'value',
-            // max: '50',
             axisLine: {
                 show: false,
                 lineStyle: {
-                    color: '#ccc'
+                    color: '#f0782399'
                 }
             },
             splitLine: {
                 show: true,
                 lineStyle: {
-                    color: '#4075ff33'
+                    color: '#f0782333'
                 }
             },
             axisLabel: {}
@@ -120,18 +119,18 @@ const initChart = () => {
                 label: {
                     show: true,
                     position: 'top',
-                    color: '#4075ffdd'
+                    color: '#f07823'
                 },
                 itemStyle: {
                     normal: {
                         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                             {
                                 offset: 0,
-                                color: '#4075ffdd'
+                                color: '#f07823'
                             },
                             {
                                 offset: 1,
-                                color: '#4075ff02'
+                                color: '#f0782302'
                             }
                         ]),
                         barBorderRadius: 6

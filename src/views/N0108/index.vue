@@ -7,16 +7,15 @@
           <span>{{ item.end }}</span>
         </div>
       </el-col>
-      <el-col :span="24" class="chart-col" style="margin-top:20px;">
+      <el-col :span="24" class="chart-col" style="margin-top:12px;">
         <BarChart />
       </el-col>
-      <el-col :span="24" class="chart-col">
+      <el-col :span="24" class="chart-col" style="margin-top:25px;">
         <BarChart1 />
       </el-col>
     </el-row>
   </div>
 </template>
-
 <script setup>
 import TaskChart from './TaskChart.vue'
 import LineChart from './LineChart.vue'
@@ -32,7 +31,6 @@ const state = reactive({
   okrs: 0,
   memos: 0
 })
-
 const cardList = ref([
   {
     id: 4,

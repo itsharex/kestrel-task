@@ -165,9 +165,7 @@ function loginHandle() {
                 userInfo.id = res.token
                 setItem('userInfo', JSON.stringify(userInfo))
                 setItem('itoken', token)
-                await publicConfig((result) => {
-                  insertLoginLogs({ ...result, loginType: 'windows',nickname })
-                });
+                await insertLoginLogs({ loginType: 'windows',nickname })
                 router.push('/')
                 await appWindow.setMaximizable(true)
                 let permissionGranted = await isPermissionGranted()
@@ -289,7 +287,7 @@ defineOptions({
 }
 
 .login-btn {
-  background-color: #008d8e !important;
+  background-color: #f07823 !important;
   border-radius: 5px;
   line-height: 40px;
   height: 40px;

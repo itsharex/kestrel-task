@@ -69,7 +69,6 @@ export const option2 = {
         },
         data: [{
             value: 90,
-
         }, ],
         coordinateSystem: 'polar',
         name: 'A',

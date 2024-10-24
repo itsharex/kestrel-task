@@ -31,11 +31,6 @@
         >
       </span>
     </div>
-    <el-col :span="24" class="n-col n-footer">
-      <el-button type="primary" @click="onSubmit" :disabled="!isCanSave"
-        >确定</el-button
-      >
-    </el-col>
   </Dialog>
 </template>
 
@@ -281,8 +276,8 @@ const onSubmit = () => {
 }
 
 .f-form {
-  margin-top: 8px;
-  height: calc(55vh - 90px);
+  margin-top: 3px;
+  height: calc(55vh - 36px);
   overflow-y: auto;
   overflow-x: hidden;
 }

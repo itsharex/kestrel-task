@@ -1,9 +1,12 @@
 <template>
-  <router-view />
+  <el-config-provider :locale="locale">
+    <router-view />
+  </el-config-provider>
 </template>
 <script setup>
 import { onMounted } from 'vue'
 import { invoke } from '@tauri-apps/api/tauri'
+import locale from 'element-plus/dist/locale/zh-cn.mjs'
 onMounted(() => {
   // window.addEventListener('contextmenu', (e) => e.preventDefault(), false)
   document.addEventListener('DOMContentLoaded', () => {

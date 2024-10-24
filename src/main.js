@@ -5,6 +5,7 @@ import router from "./router";
 import "element-plus/theme-chalk/index.css";
 import Components from '@/components/components.js'
 import './permission'
+
 const app = createApp(App);
 const initApp = async () => {
   app.use(router);

@@ -4,7 +4,7 @@
       <div class="top">
         <!-- <logo class="logos" /> -->
         <div class="top-title">
-          <img :src="logo1"/>
+          <!-- <img :src="logo1"/> -->
           微芒计划</div>
       </div>
       <div class="sub-title">微芒计划，点亮你的待办清单，简单高效，管理从心开始。</div>
@@ -25,7 +25,7 @@ import Logo from './components/logo.vue'
 import LoginPwd from './loginPwd.vue'
 import { ref, onBeforeMount, onUnmounted, onMounted } from 'vue'
 import { appWindow } from '@tauri-apps/api/window';
-const logo1 = new URL(`@/assets/logo2.png`, import.meta.url).href
+const logo1 = new URL(`@/assets/logo.png`, import.meta.url).href
 
 
 const isShowWX = ref(true)
@@ -95,7 +95,7 @@ defineOptions({
   line-height: 20px;
   text-align: center;
   font-weight: 400;
-  color: #008d8e;
+  color: #f07823;
   letter-spacing: 3px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;

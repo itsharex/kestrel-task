@@ -235,10 +235,10 @@ body {
 }
 .is-today,
 .is-selected{
-  background-color: #efefef65 !important;
+  background-color: #f0782399 !important;
 }
 .el-calendar-day:hover{
-  background-color: #efefef65 !important;
+  background-color: #f0782399 !important;
 }
 
 .el-button{
@@ -249,23 +249,25 @@ body {
   border-radius: 8px!important;
   padding: 7px 10px;
   transition: 100ms;
-  background: #008c8e!important;
+  background: #f07823!important;
   color:#000;
   overflow: hidden;
+  border-color:#d66e24!important;
 }
 .el-button:focus,
 .el-button:active,
 .el-button:hover{
-  background: #008c8e!important;
+  background: #d75c03!important;
+  border-color:#d66e24!important;
 }
 .el-button--reset{
-  background: #008c8e!important;
+  background: #f07823!important;
 }
 .el-button--reset:focus,
 .el-button--reset:active,
 .el-button--reset:hover{
   color:#ccc!important;
-  background: #008c8e!important;
+  background: #f07823!important;
 }
 
 .el-message-box{

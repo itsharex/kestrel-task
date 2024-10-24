@@ -113,10 +113,11 @@ const dialogTitle = ref('')
 const dateClick = (date) => {
   let today = dayjs(date).format('YYYY-MM-DD')
   let now = dayjs(date).format('MM-DD')
-
   dialogTitle.value = '任务明细 ' + today
   state.detail = state.tasks.filter((t) => t.date === now)
-  isDetailVisible.value = true
+  if(state.detail && state.detail.length){
+    isDetailVisible.value = true
+  }
 }
 onMounted(() => {
   search()

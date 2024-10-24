@@ -1,13 +1,9 @@
 <template>
-  <div
-    :class="props.className"
-    :style="{ height: props.height, width: props.width }"
-    ref="container1"
-  />
+    <div :class="props.className" :style="{ height: props.height, width: props.width }" ref="container1" />
 </template>
 
 <script setup>
-import { nextTick, onMounted, reactive, ref ,onBeforeUnmount} from 'vue'
+import { nextTick, onMounted, reactive, ref, onBeforeUnmount } from 'vue'
 import { getLast3MonthTasks } from '@/api/index.js'
 import * as echarts from 'echarts'
 const animationDuration = 6000
@@ -38,7 +34,7 @@ const initChart = () => {
         title: {
             text: '每日新增任务',
             textStyle: {
-                color: '#999',
+                color: '#f0782399',
                 fontSize: '14px'
             }
         },
@@ -60,7 +56,7 @@ const initChart = () => {
                             },
                             {
                                 offset: 0.5,
-                                color: '#008c8e' // 100% 处的颜色
+                                color: '#f07823' // 100% 处的颜色
                             },
                             {
                                 offset: 1,
@@ -78,7 +74,7 @@ const initChart = () => {
             top: '10%',
             type: 'plain',
             textStyle: {
-                color: '#008c8e99',
+                color: '#7ec7ff',
                 fontSize: 16
             },
             // icon:'rect',
@@ -113,14 +109,14 @@ const initChart = () => {
                         padding: 16,
                         fontSize: 12
                     },
-                    formatter: function(data) {
+                    formatter: function (data) {
                         return data
                     }
                 },
                 splitLine: {
                     show: false,
                     lineStyle: {
-                        color: '#4075ffdd'
+                        color: '#f0782393'
                     }
                 },
                 axisTick: {
@@ -133,7 +129,7 @@ const initChart = () => {
             {
                 name: '',
                 nameTextStyle: {
-                    color: '#4075ffdd',
+                    color: '#f07823',
                     fontSize: 16,
                     padding: 10
                 },
@@ -141,22 +137,22 @@ const initChart = () => {
                 splitLine: {
                     show: true,
                     lineStyle: {
-                        color: '#4075ff41'
+                      color: '#f0782333'
                     }
                 },
                 axisLine: {
                     show: false,
                     lineStyle: {
-                        color: '#ccc'
+                        color: '#f07823'
                     }
                 },
                 axisLabel: {
                     show: true,
                     textStyle: {
-                        color: '#ccc',
+                        color: '#f07823',
                         padding: 16
                     },
-                    formatter: function(value) {
+                    formatter: function (value) {
                         if (value === 0) {
                             return value
                         }
@@ -179,18 +175,18 @@ const initChart = () => {
                 label: {
                     show: true,
                     position: 'top',
-                    color: '#4075ff'
+                    color: '#f07823'
                 },
                 lineStyle: {
                     normal: {
                         width: 1,
-                        color: '#4075ff' // 线条颜色
+                        color: '#f07823' // 线条颜色
                     },
                     borderColor: 'rgba(0,0,0,.4)'
                 },
                 itemStyle: {
-                    color: '#4075ff',
-                    borderColor: '#4075ff',
+                    color: '#f07823',
+                    borderColor: '#f07823',
                     borderWidth: 2
                 },
                 tooltip: {
@@ -208,7 +204,7 @@ const initChart = () => {
                             [
                                 {
                                     offset: 0,
-                                    color: '#4075ff33'
+                                    color: '#f0782333'
                                 },
                                 {
                                     offset: 1,
@@ -217,7 +213,7 @@ const initChart = () => {
                             ],
                             false
                         ),
-                        shadowColor: '#4075ff77', // 阴影颜色
+                        shadowColor: '#f0782377', // 阴影颜色
                         shadowBlur: 20 // shadowBlur设图形阴影的模糊大小。配合shadowColor,shadowOffsetX/Y, 设置图形的阴影效果。
                     }
                 },
